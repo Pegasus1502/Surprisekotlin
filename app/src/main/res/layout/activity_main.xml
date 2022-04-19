@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/front"
+    android:screenOrientation="portrait"
+    tools:context=".MainActivity">
+
+    <soup.neumorphism.NeumorphTextView
+        android:id="@+id/textView"
+        app:neumorph_shapeType="basin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dancingscript"
+        android:text="@string/hey"
+        android:textAlignment="center"
+        android:textColor="#5E5757"
+        android:textSize="@dimen/_30sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.026" />
+
+    <soup.neumorphism.NeumorphTextView
+        android:id="@+id/textView2"
+        app:neumorph_shapeType="basin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dancingscript"
+        android:text="@string/i_have_surprise_for_you"
+        android:textColor="#5E5757"
+        android:textSize="@dimen/_26sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintVertical_bias="0.081" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/cardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:neumorph_backgroundColor="@color/status"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="216dp"
+            app:neumorph_shapeType="basin"
+            >
+
+            <EditText
+                android:id="@+id/getName"
+                android:layout_width="285dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/name"
+                android:ems="10"
+                android:hint="@string/enter_your_name"
+                android:inputType="textPersonName"
+                android:padding="@dimen/_10sdp"
+                android:textColor="#151414"
+                android:textColorHint="#7E7979"
+                android:importantForAutofill="no" />
+
+        </soup.neumorphism.NeumorphCardView>
+
+
+    </LinearLayout>
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/button"
+        android:layout_width="215dp"
+        android:layout_height="86dp"
+        android:fontFamily="@font/sansprobold"
+        android:gravity="center"
+        android:text="@string/open"
+        android:textColor="#5E5757"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.121"
+        app:neumorph_backgroundColor="@color/status"
+        app:neumorph_shapeType="basin" />
+</androidx.constraintlayout.widget.ConstraintLayout>
